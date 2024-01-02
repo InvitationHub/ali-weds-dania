@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const topElement = document.querySelector("#home");
+
+    if (topElement) {
+        topElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+});
 const util = (() => {
 
     const opacity = (id) => {
@@ -91,7 +98,6 @@ const util = (() => {
     const openinvite = async (button) => {
         button.disabled = true;
         document.querySelector('body').style.overflowY = 'scroll';
-		window.scrollTo(0, 0);
         AOS.init();
         audio.play();
 		
